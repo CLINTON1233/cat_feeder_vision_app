@@ -61,7 +61,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const CatFeederApp());
@@ -85,7 +85,7 @@ class CatFeederApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF0D0D0D),
         fontFamily: 'Roboto',
       ),
-      home: const HomeScreen(),
+      home: const HomePage(),
       builder: (context, child) {
         final mediaQuery = MediaQuery.of(context);
         final scale = mediaQuery.textScaler.clamp(

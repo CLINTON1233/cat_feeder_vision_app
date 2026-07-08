@@ -9,14 +9,14 @@ import '../widgets/mjpeg_stream_view.dart';
 import '../widgets/status_card.dart';
 import '../widgets/manual_feed_button.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
   final ApiService _apiService = ApiService();
   final MqttService _mqttService = MqttService();
 
@@ -173,13 +173,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(right: 16),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 6,
+                  ),
                   decoration: BoxDecoration(
-                    color: (_backendConnected
-                            ? const Color(0xFF30D158)
-                            : const Color(0xFFFF453A))
-                        .withOpacity(0.15),
+                    color:
+                        (_backendConnected
+                                ? const Color(0xFF30D158)
+                                : const Color(0xFFFF453A))
+                            .withOpacity(0.15),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
